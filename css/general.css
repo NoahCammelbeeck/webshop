@@ -49,6 +49,10 @@ a {
   border-radius: 7px;
 }
 
+.card img {
+  width: 100%;
+}
+
 .udsolgt {
   position: relative;
   text-align: center;
