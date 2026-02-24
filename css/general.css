@@ -3,6 +3,18 @@
   margin: 0;
 }
 
+header{
+  margin: 20px;
+}
+
+header p{
+  font-size: 36px;
+}
+
+h1{
+  margin-left: 20px;
+}
+
 .grid3x2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -33,17 +45,18 @@ a {
 }
 
 .card {
-  border: red solid 1px;
+  /* border: red solid 1px; */
   margin: 0;
   padding: 3px;
   background-color: aquamarine;
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
+  border-radius: 7px;
 }
 
 .udsolgt{
-    position: relative;
+  position: relative;
   text-align: center;
 }
 
@@ -58,4 +71,8 @@ a {
 
 .udsolgt img{
   opacity: 80%;
+}
+
+.details{
+  color:rgb(117, 117, 117);
 }
