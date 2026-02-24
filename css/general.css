@@ -1,4 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .grid3x2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.kayakgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card img {
+  width: 20rem;
+  object-fit: contain;
+}
+
+.card p:first-child {
+  color: rgb(0, 232, 116);
+}
+
+.card {
+  border: red solid 1px;
+  margin: 10px;
+  padding: 3px;
+  background-color: aquamarine;
 }
