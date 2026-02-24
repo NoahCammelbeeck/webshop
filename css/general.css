@@ -3,15 +3,15 @@
   margin: 0;
 }
 
-header{
+header {
   margin: 20px;
 }
 
-header p{
+header p {
   font-size: 36px;
 }
 
-h1{
+h1 {
   margin-left: 20px;
 }
 
@@ -34,12 +34,6 @@ a {
   padding: 1rem;
 }
 
-.card img {
-  object-fit: contain;
-  aspect-ratio: 1:1;
-  width: 100%;
-}
-
 .card p:first-child {
   color: rgb(0, 232, 116);
 }
@@ -55,12 +49,12 @@ a {
   border-radius: 7px;
 }
 
-.udsolgt{
+.udsolgt {
   position: relative;
   text-align: center;
 }
 
-.udsolgt p{
+.udsolgt p {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -69,10 +63,10 @@ a {
   font-size: 75px;
 }
 
-.udsolgt img{
+.udsolgt img {
   opacity: 80%;
 }
 
-.details{
-  color:rgb(117, 117, 117);
+.details {
+  color: rgb(117, 117, 117);
 }
