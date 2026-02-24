@@ -67,6 +67,10 @@ a {
   opacity: 80%;
 }
 
+.card img {
+  width: 100%;
+}
+
 .details {
   color: rgb(117, 117, 117);
 }
