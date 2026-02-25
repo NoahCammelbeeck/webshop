@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "sunflower";
+  src: url(../font/Sunflower-Medium.woff);
+}
+
 * {
   padding: 0;
   margin: 0;
+  font-family: "sunflower";
 }
 
 body {
