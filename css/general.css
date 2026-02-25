@@ -7,8 +7,10 @@ header {
   margin: 20px;
 }
 
-header p {
+header a {
   font-size: 36px;
+  color: brown;
+  font-weight: 900;
 }
 
 h1 {
