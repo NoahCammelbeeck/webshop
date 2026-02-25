@@ -95,6 +95,6 @@ a {
   text-align: center;
   transition: 0.25s;
   &:hover {
-    opacity: 0.6;
+    opacity: 0.65;
   }
 }
