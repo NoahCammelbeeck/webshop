@@ -89,4 +89,12 @@ a {
 
 .indexbutton {
   background-color: aquamarine;
+  margin: 10px 20px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.25s;
+  &:hover {
+    opacity: 0.65;
+  }
 }
