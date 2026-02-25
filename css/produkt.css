@@ -1,0 +1,73 @@
+.detailcontainer {
+  display: grid;
+  grid-template-columns: 35% 35% 30%;
+  margin: 20px;
+  border: solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+h4 {
+  margin: 20px;
+  font-size: 28px;
+}
+
+.description {
+  padding: 10px;
+}
+
+.detailcontainer img {
+  width: 100%;
+}
+
+label {
+  margin: 15px;
+}
+
+p {
+  margin: 5px;
+}
+
+.infodetail {
+  margin-left: 10px;
+}
+
+.infodetail p {
+  margin-left: 20px;
+}
+
+.moreinfo {
+  margin: 25px 0px 25px 10px;
+}
+
+.buy {
+  background-color: rgb(188, 188, 188);
+}
+
+.buy p {
+  margin: 20px;
+  font-weight: 600;
+}
+
+.buy button {
+  margin: 3px 0px 0px 30px;
+  background-color: aquamarine;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  transition: 0.2s;
+}
+
+.buy button:hover {
+  opacity: 0.65;
+  cursor: pointer;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 40px;
+}
+
+.allinfo {
+  padding: 15px;
+}

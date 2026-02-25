@@ -4,22 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/produkt.css" />
     <title>Produkter</title>
   </head>
   <body>
-    <header><a href="index.html">Sports & sports</a></header>
+    <header><a href="index.html">Sports & Sports</a></header>
     <div class="detailcontainer">
       <div class="pictureframe">
         <img src="images/aquajet_kayak.jpg" alt="et billede af en AquaJet kayak" />
       </div>
-      <article>
+
+      <div class="allinfo">
         <h1>AquaJet Kayak</h1>
-        <h2>kayaker</h2>
-        <p>
+        <p class="description">
           Oplev vandet på en helt ny måde med Aquajet Kayak – den perfekte kombination af hastighed, stabilitet og nem håndtering. Uanset om du er
           nybegynder eller erfaren kajakroer, giver Aquajet Kayak dig mulighed for at udforske søer, floder og kystlinjer med lethed og komfort.
         </p>
-      </article>
+        <div class="moreinfo">
+          <h2>Produkt info</h2>
+          <div class="infodetail">
+            <h3>Modelnavn</h3>
+            <p>AquaJet Blue very very fast 3000</p>
+          </div>
+          <div class="infodetail">
+            <h3>Farve</h3>
+            <p>Blå</p>
+          </div>
+          <div class="infodetail">
+            <h3>Modelnummer</h3>
+            <p>896456</p>
+          </div>
+        </div>
+      </div>
+      <div class="buy">
+        <h4>AquaJet Kayak</h4>
+        <div class="price">
+          <p>Pris</p>
+          <p>1,999 dkk</p>
+        </div>
+        <div class="size">
+          <p>Vælg størrelse:</p>
+          <label for="størrrelser"></label>
+
+          <select name="cars" id="cars">
+            <option value="1person">1 person</option>
+            <option value="2person">2 personer</option>
+            <option value="3person">3 personer</option>
+            <option value="4person">4 personer</option>
+          </select>
+        </div>
+        <button>Læg i kurv</button>
+      </div>
     </div>
   </body>
 </html>
