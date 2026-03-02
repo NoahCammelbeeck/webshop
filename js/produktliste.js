@@ -14,7 +14,7 @@ function showProducts(productsArr) {
   productsArr.forEach((product) => {
     console.log("product", product.id);
 
-    productContainer.innerHTML += ` <a href="produkt.html" class="card">
+    productContainer.innerHTML += ` <a href="produkt.html?id=${product.id}" class="card">
           <div>
             <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="Shorts for running" />
             <h2>${product.productdisplayname}</h2>
