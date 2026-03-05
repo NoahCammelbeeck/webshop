@@ -46,10 +46,6 @@ a {
   padding: 1rem;
 }
 
-.card p:first-child {
-  color: rgb(0, 232, 116);
-}
-
 .card {
   /* border: red solid 1px; */
   margin: 0;
@@ -97,4 +93,27 @@ a {
   &:hover {
     opacity: 0.65;
   }
+}
+
+.discount {
+  color: white;
+  background-color: red;
+  width: 40px;
+  padding: 2px;
+  border-radius: 5px;
+  text-align: center;
+  /* place-self: end; */
+  /* margin-top: 10px; */
+}
+
+.display_none {
+  display: none;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.pricesection {
+  margin-top: 15px;
 }
