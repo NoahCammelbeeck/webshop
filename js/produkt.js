@@ -9,8 +9,9 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
   .then((response) => response.json())
   .then((data) => {
     productContainer.innerHTML = `
-      <div class="pictureframe">
+      <div class="${data.soldout ? " udsolgt" : ""}">
         <img src="https://kea-alt-del.dk/t7/images/webp/640/${id}.webp" alt="" />
+        <p class="${data.soldout ? "" : "display_none"}">SOLD OUT</p>
       </div>
 
       <div class="allinfo">
@@ -37,8 +38,10 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
       <div class="buy">
         <div class="price">
           <p>Price</p>
-          <p>${data.price}</p>
+          <p class="${data.discount ? " strikethrough" : " "}">DKK ${data.price}</p>
+          <p class="${data.discount ? " discount" : " display_none"}">${data.discount} % </p>
         </div>
+        <p class="${data.discount ? "" : "display_none"}"> Now DKK <span>${Math.ceil(data.price - (data.price / 100) * data.discount)} </span>,-</p>
         <div class="size">
           <p>Pick size:</p>
           <label for="størrrelser"></label>
