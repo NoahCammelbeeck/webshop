@@ -1,9 +1,9 @@
 "use strict";
 const params = new URLSearchParams(window.location.search);
 const category = params.get("category");
-console.log("hej med dig", category);
+// console.log("hej med dig", category);
 
-fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}`)
+fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=50`)
   .then((response) => response.json())
   .then((data) => {
     showProducts(data);
@@ -14,7 +14,7 @@ const productContainer = document.querySelector(".sportsgrid");
 function showProducts(productsArr) {
   // console.log("productsArr", productsArr);
   document.querySelector("#heading").innerHTML = `<h1>${category}</h1>`;
-  // productContainer.innerHTML = "";
+  productContainer.innerHTML = "";
 
   productsArr.forEach((product) => {
     console.log("product", product.id);
