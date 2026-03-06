@@ -60,3 +60,8 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
 //   .then((data) => {
 //     showProducts(data);
 //   });
+
+document.querySelector(".back_btn").addEventListener("click", goBack);
+function goBack() {
+  history.back();
+}
