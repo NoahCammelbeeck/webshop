@@ -1,12 +1,40 @@
 "use strict";
 const params = new URLSearchParams(window.location.search);
-const category = params.get("category");
-// console.log("hej med dig", category);
+let category = params.get("category") ?? "Apparel";
+
+let leData;
+
+document.querySelector(".asc").addEventListener("click", klikSorterAsc);
+document.querySelector(".des").addEventListener("click", klikSorterDes);
+function klikSorterAsc(evt) {
+  console.log("KLIK SORTER", evt.target.dataset.direction);
+  leData.sort(function (a, b) {
+    return a.realPrice - b.realPrice;
+  });
+  showProducts(leData);
+}
+function klikSorterDes(evt) {
+  console.log("KLIK SORTER", evt.target.dataset.direction);
+  leData.sort(function (a, b) {
+    return b.realPrice - a.realPrice;
+  });
+  showProducts(leData);
+}
 
 fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=50`)
   .then((response) => response.json())
   .then((data) => {
-    showProducts(data);
+    //if (product.discount) data.realPrice = Math.ceil(product.price - (product.price / 100) * product.discount);
+    data.forEach((product) => {
+      if (product.discount) {
+        product.realPrice = Math.ceil(product.price - (product.price / 100) * product.discount);
+      } else {
+        product.realPrice = product.price;
+      }
+    });
+    leData = data;
+
+    showProducts(leData);
   });
 
 const productContainer = document.querySelector(".sportsgrid");
@@ -37,8 +65,10 @@ function showProducts(productsArr) {
             <h2>${product.productdisplayname}</h2>
             <p class="details">${product.articletype} | ${product.brandname} | ${product.gender}</p>
             <section class="pricesection">
-            <p class="${product.discount ? " strikethrough" : " "}">DKK ${product.price} ,-</p>
-            <p class="${product.discount ? " discount" : " display_none"}">${product.discount} %</p>
+            <div class="saving">
+              <p class="${product.discount ? " strikethrough" : " "}">DKK ${product.price} ,-</p>
+              <p class="${product.discount ? " discount" : " display_none"}">${product.discount} %</p>
+           </div>
             <p class="${product.discount ? "" : "display_none"}"> Now DKK <span>${Math.ceil(product.price - (product.price / 100) * product.discount)} </span>,-</p>
             </section>
             </div>

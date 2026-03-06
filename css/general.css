@@ -102,6 +102,7 @@ a {
   padding: 2px;
   border-radius: 5px;
   text-align: center;
+  margin-right: 15px;
   /* place-self: end; */
   /* margin-top: 10px; */
 }
@@ -116,4 +117,27 @@ a {
 
 .pricesection {
   margin-top: 15px;
+}
+
+.back_btn,
+.asc,
+.des {
+  margin: 10px 20px;
+  width: 7rem;
+  height: auto;
+  background-color: aquamarine;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  transition: 0.24s;
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.saving {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
